@@ -1,17 +1,53 @@
 /**
  * Vercel Serverless Function - Sync Endpoint
  * 
- * NOTA: Vercel serverless functions non hanno storage persistente su file system.
- * Questa versione usa memory storage temporaneo per demo.
- * Per produzione, considera: Vercel KV, Vercel Postgres, o MongoDB Atlas.
+ * Usa Upstash Redis per storage persistente tra tutti i dispositivi.
+ * Configurare UPSTASH_REDIS_REST_URL e UPSTASH_REDIS_REST_TOKEN nelle env vars.
  */
 
-// In-memory storage (reset ad ogni cold start - solo per demo)
-// Per persistenza reale, usa un database esterno
-let syncData = {
+import { Redis } from '@upstash/redis'
+
+const DATA_KEY = 'fastcorp-sync-data'
+
+// Inizializza Redis solo se le variabili sono configurate
+let redis = null
+if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  redis = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+  })
+}
+
+// Fallback in-memory (per quando Redis non è configurato)
+let memoryData = {
   projects: [],
   tasks: [],
   lastSync: new Date().toISOString()
+}
+
+async function getData() {
+  if (redis) {
+    try {
+      const data = await redis.get(DATA_KEY)
+      if (data) return data
+    } catch (e) {
+      console.error('Redis GET error:', e)
+    }
+  }
+  return memoryData
+}
+
+async function setData(data) {
+  if (redis) {
+    try {
+      await redis.set(DATA_KEY, data)
+      return true
+    } catch (e) {
+      console.error('Redis SET error:', e)
+    }
+  }
+  memoryData = data
+  return true
 }
 
 export default async function handler(req, res) {
@@ -28,9 +64,11 @@ export default async function handler(req, res) {
 
   // GET - Retrieve data
   if (req.method === 'GET') {
+    const syncData = await getData()
     return res.status(200).json({
       success: true,
-      data: syncData
+      data: syncData,
+      storage: redis ? 'upstash' : 'memory'
     })
   }
 
@@ -46,18 +84,21 @@ export default async function handler(req, res) {
         })
       }
 
-      syncData = {
+      const syncData = {
         projects,
         tasks,
         lastSync: new Date().toISOString()
       }
 
-      console.log(`✅ Synced: ${projects.length} projects, ${tasks.length} tasks`)
+      await setData(syncData)
+
+      console.log(`✅ Synced: ${projects.length} projects, ${tasks.length} tasks (${redis ? 'Upstash' : 'Memory'})`)
 
       return res.status(200).json({
         success: true,
         message: 'Data synced successfully',
-        lastSync: syncData.lastSync
+        lastSync: syncData.lastSync,
+        storage: redis ? 'upstash' : 'memory'
       })
     } catch (error) {
       console.error('Error saving data:', error)
@@ -74,4 +115,3 @@ export default async function handler(req, res) {
     error: 'Method not allowed'
   })
 }
-

@@ -137,7 +137,7 @@ export const AppProvider = ({ children }) => {
           await db.clearAllData()
 
           let dataToLoad = null
-          
+
           // Try to fetch default-data.json (contains your saved data with calendar assignments)
           try {
             const response = await fetch('/default-data.json')

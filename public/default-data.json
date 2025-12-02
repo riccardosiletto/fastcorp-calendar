@@ -67,48 +67,167 @@
   ],
   "tasks": [
     {
+      "title": "Weekly report W48",
+      "projectId": "design2taste",
+      "date": "2025-11-28",
+      "id": "task-1764673157650",
+      "completed": true,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
+      "title": "Reputation&SEO Assessment",
+      "projectId": "project-1764673271629",
+      "date": "2025-12-07",
+      "id": "task-1764673284347",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": "",
+      "label": "scheduled",
+      "comments": ""
+    },
+    {
+      "title": "Modifiche siti e amends",
+      "projectId": "project-1764673513665",
+      "date": null,
+      "id": "task-1764681920064",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": "",
+      "comments": ""
+    },
+    {
+      "title": "Attribution model (polar o triple whale)",
+      "projectId": "project-1764673513665",
+      "date": "2025-12-04",
+      "id": "task-1764681981871",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": "",
+      "comments": ""
+    },
+    {
+      "title": "Dashboard funnel vendite",
+      "projectId": "project-1764673513665",
+      "date": null,
+      "id": "task-1764681996212",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": "",
+      "comments": ""
+    },
+    {
+      "title": "Weekly Report W49",
+      "projectId": "design2taste",
+      "date": "2025-12-05T08:00:00.000Z",
+      "id": "task-1764692591108",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
+      "title": "Tempistiche POC ",
+      "projectId": "project-1764673318947",
+      "date": "2025-12-04T08:00:00.000Z",
+      "id": "task-1764693849628",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
+      "title": "Dw51 | Page structure, craw not index.",
+      "projectId": "24hassistance",
+      "date": "2025-12-18",
+      "id": "task-1764701529222",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": "",
+      "label": "scheduled",
+      "comments": "Motoplatinun:\n- page structure\n- crawled not indexed\n"
+    },
+    {
+      "title": "Dw50 - Analisi Tecnica",
+      "projectId": "doeatbetter",
+      "date": "2025-12-11T08:00:00.000Z",
+      "id": "task-1764701974020",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
+      "title": "Fix Workflows",
+      "projectId": "project-1764673318947",
+      "date": null,
+      "id": "task-1764703600190",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
+      "title": "Tiktok Accounts",
+      "projectId": "project-1764673318947",
+      "date": null,
+      "id": "task-1764703663027",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
+      "title": "CRO reference",
+      "projectId": "24hassistance",
+      "date": null,
+      "id": "task-1764705390388",
+      "completed": false,
+      "status": "in-progress",
+      "priority": "medium",
+      "description": "",
+      "assignedTo": ""
+    },
+    {
       "id": "task-24h-1",
       "projectId": "24hassistance",
-      "title": "email tools",
+      "title": "email PDF, Tools e 30 domini",
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": "2025-12-02T08:00:00.000Z",
+      "date": "2025-12-02",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "label": "scheduled",
+      "comments": ""
     },
     {
       "id": "task-24h-2",
       "projectId": "24hassistance",
-      "title": "Ealih check",
+      "title": "Ealth check",
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": "2025-12-01T08:00:00.000Z",
+      "date": "2025-12-01",
       "assignedTo": "",
-      "completed": false
-    },
-    {
-      "title": "Email 30 domini",
-      "projectId": "design2taste",
-      "date": "2025-12-02T08:00:00.000Z",
-      "id": "task-1764673062691",
-      "completed": false,
-      "status": "in-progress",
-      "priority": "medium",
-      "description": "",
-      "assignedTo": ""
-    },
-    {
-      "title": "Weekly report",
-      "projectId": "design2taste",
-      "date": "2025-12-05T08:00:00.000Z",
-      "id": "task-1764673157650",
-      "completed": false,
-      "status": "in-progress",
-      "priority": "medium",
-      "description": "",
-      "assignedTo": ""
+      "completed": true
     },
     {
       "id": "task-d2t-2",
@@ -117,7 +236,7 @@
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": "2025-12-03T08:00:00.000Z",
+      "date": "2025-12-02T23:00:00.000Z",
       "assignedTo": "",
       "completed": false
     },
@@ -133,26 +252,17 @@
       "completed": false
     },
     {
-      "id": "task-d2t-4",
-      "projectId": "design2taste",
-      "title": "Monthly report",
-      "description": "",
-      "status": "todo",
-      "priority": "medium",
-      "date": null,
-      "assignedTo": "",
-      "completed": false
-    },
-    {
       "id": "task-d2t-5",
       "projectId": "design2taste",
       "title": "AI Redesigner",
       "description": "",
       "status": "todo",
       "priority": "high",
-      "date": "2025-12-05T08:00:00.000Z",
+      "date": "2025-12-03T23:00:00.000Z",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "label": "in-progress",
+      "comments": "- Piantina\n\n- Richiesta modifiche senza stile  \n\n\n\nPiantina 2D ——> piantina 3D"
     },
     {
       "id": "task-d2t-6",
@@ -168,13 +278,13 @@
     {
       "id": "task-deb-1",
       "projectId": "doeatbetter",
-      "title": "Nuova Delivery",
+      "title": "Report e ottimizzazioni W48",
       "description": "",
       "status": "todo",
       "priority": "high",
-      "date": null,
+      "date": "2025-11-28T08:00:00.000Z",
       "assignedTo": "",
-      "completed": false
+      "completed": true
     },
     {
       "id": "task-deb-2",
@@ -183,7 +293,7 @@
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": null,
+      "date": "2025-12-11T08:00:00.000Z",
       "assignedTo": "",
       "completed": false
     },
@@ -205,7 +315,7 @@
       "description": "",
       "status": "todo",
       "priority": "high",
-      "date": "2025-12-09T23:00:00.000Z",
+      "date": "2025-12-09T08:00:00.000Z",
       "assignedTo": "",
       "completed": false
     },
@@ -216,7 +326,7 @@
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": null,
+      "date": "2025-12-11T08:00:00.000Z",
       "assignedTo": "",
       "completed": false
     },
@@ -229,7 +339,7 @@
       "priority": "medium",
       "date": "2025-12-01T08:00:00.000Z",
       "assignedTo": "",
-      "completed": false
+      "completed": true
     },
     {
       "id": "task-hr-2",
@@ -254,59 +364,17 @@
       "completed": false
     },
     {
-      "title": "Reputation&SEO Assessment",
-      "projectId": "project-1764673271629",
-      "date": "2025-12-05T08:00:00.000Z",
-      "id": "task-1764673284347",
-      "completed": false,
-      "status": "in-progress",
-      "priority": "medium",
-      "description": "",
-      "assignedTo": ""
-    },
-    {
-      "title": "modifiche siti e amends",
-      "projectId": "project-1764673513665",
-      "date": null,
-      "id": "task-1764681920064",
-      "completed": false,
-      "status": "in-progress",
-      "priority": "medium",
-      "description": "",
-      "assignedTo": ""
-    },
-    {
-      "title": "set up attribution model (polar o triple whale)",
-      "projectId": "project-1764673513665",
-      "date": null,
-      "id": "task-1764681981871",
-      "completed": false,
-      "status": "in-progress",
-      "priority": "medium",
-      "description": "",
-      "assignedTo": ""
-    },
-    {
-      "title": "dashboard funnel vendite",
-      "projectId": "project-1764673513665",
-      "date": null,
-      "id": "task-1764681996212",
-      "completed": false,
-      "status": "in-progress",
-      "priority": "medium",
-      "description": "",
-      "assignedTo": ""
-    },
-    {
       "id": "task-ss-1",
       "projectId": "skillsherpa",
-      "title": "Lp",
+      "title": "Landing SkillMapping LinkedIn",
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": "2025-12-03T08:00:00.000Z",
+      "date": "2025-12-03",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "label": "in-progress",
+      "comments": "Discorso \"inside-out\"\n\nCopy e background"
     },
     {
       "id": "task-ss-2",
@@ -315,9 +383,11 @@
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": "2025-12-03T08:00:00.000Z",
+      "date": "2025-12-03",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "label": "in-progress",
+      "comments": "- Style and visualization\n\n- New charts\n\n- More insights \n\n- Lana edits"
     },
     {
       "id": "task-ss-3",
@@ -328,18 +398,21 @@
       "priority": "medium",
       "date": "2025-12-02T08:00:00.000Z",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "label": "scheduled"
     },
     {
       "id": "task-ss-4",
       "projectId": "skillsherpa",
-      "title": "Tracking e wireframe",
+      "title": "Tracking e cookie",
       "description": "",
       "status": "todo",
       "priority": "medium",
-      "date": "2025-12-02T08:00:00.000Z",
+      "date": "2025-12-02",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "label": "in-progress",
+      "comments": ""
     },
     {
       "id": "task-ss-5",
@@ -355,14 +428,15 @@
     {
       "id": "task-ss-6",
       "projectId": "skillsherpa",
-      "title": "AI Voice Agent",
+      "title": "AI Voice Agent PoC",
       "description": "",
       "status": "todo",
       "priority": "high",
-      "date": null,
+      "date": "2025-12-03T08:00:00.000Z",
       "assignedTo": "",
-      "completed": false
+      "completed": false,
+      "comments": "Custom n8n structure"
     }
   ],
-  "lastSync": "2025-12-02T13:26:36.236Z"
+  "lastSync": "2025-12-02T22:46:04.635Z"
 }
