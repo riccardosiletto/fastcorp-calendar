@@ -1,0 +1,293 @@
+{
+    "version": 1,
+    "exportDate": "2025-11-27T02:40:00.000Z",
+    "data": {
+        "projects": [
+            {
+                "id": "skillsherpa",
+                "name": "SkillSherpa",
+                "logo": "/loghi progetti/SkillSherpa.svg",
+                "color": "#10b981",
+                "dueDate": null,
+                "progress": 0
+            },
+            {
+                "id": "design2taste",
+                "name": "Design2Taste",
+                "logo": "/loghi progetti/Design2Taste.svg",
+                "color": "#ff6b35",
+                "dueDate": null,
+                "progress": 0
+            },
+            {
+                "id": "doeatbetter",
+                "name": "DoEatBetter",
+                "logo": "/loghi progetti/DoEatBetter.svg",
+                "color": "#8b5cf6",
+                "dueDate": null,
+                "progress": 0
+            },
+            {
+                "id": "24hassistance",
+                "name": "24Hassistance",
+                "logo": "/loghi progetti/24Hassistance.svg",
+                "color": "#ffa500",
+                "dueDate": null,
+                "progress": 0
+            },
+            {
+                "id": "hrtrails",
+                "name": "HRtrails",
+                "logo": "/loghi progetti/HRtrails.svg",
+                "color": "#3b82f6",
+                "dueDate": null,
+                "progress": 0
+            }
+        ],
+        "tasks": [
+            {
+                "id": "task-1732673001",
+                "projectId": "skillsherpa",
+                "title": "Lp",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673002",
+                "projectId": "skillsherpa",
+                "title": "Results Page",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673003",
+                "projectId": "skillsherpa",
+                "title": "Creatives",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673004",
+                "projectId": "skillsherpa",
+                "title": "Tracking e wireframe",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673005",
+                "projectId": "skillsherpa",
+                "title": "Career Lab",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673006",
+                "projectId": "skillsherpa",
+                "title": "AI Voice Agent",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673007",
+                "projectId": "design2taste",
+                "title": "Post IG",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673008",
+                "projectId": "design2taste",
+                "title": "Campigns",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673009",
+                "projectId": "design2taste",
+                "title": "Home Page",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673010",
+                "projectId": "design2taste",
+                "title": "Monthly report",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673011",
+                "projectId": "design2taste",
+                "title": "AI Redesigner",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673012",
+                "projectId": "design2taste",
+                "title": "Check competitor Simone, Ylenia",
+                "description": "",
+                "status": "todo",
+                "priority": "low",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673013",
+                "projectId": "doeatbetter",
+                "title": "Nuova Delivery",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673014",
+                "projectId": "doeatbetter",
+                "title": "Check bl email Francesco",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673015",
+                "projectId": "doeatbetter",
+                "title": "Backlinks",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673016",
+                "projectId": "doeatbetter",
+                "title": "Proposta 2025",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673017",
+                "projectId": "doeatbetter",
+                "title": "PR",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673018",
+                "projectId": "24hassistance",
+                "title": "email Matteo",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673019",
+                "projectId": "24hassistance",
+                "title": "Ealih check",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673020",
+                "projectId": "hrtrails",
+                "title": "Mail Renzo",
+                "description": "",
+                "status": "todo",
+                "priority": "medium",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673021",
+                "projectId": "hrtrails",
+                "title": "Inizio doc",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            },
+            {
+                "id": "task-1732673022",
+                "projectId": "hrtrails",
+                "title": "Inizio MVP",
+                "description": "",
+                "status": "todo",
+                "priority": "high",
+                "date": null,
+                "assignedTo": "",
+                "completed": false
+            }
+        ],
+        "theme": "dark"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "fastcorp-taskcorp",
+    "version": "1.0.0",
+    "description": "TaskCorp - Professional project and task management tool",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "server": "node server.js",
+        "start": "npm run server & npm run dev"
+    },
+    "dependencies": {
+        "@dnd-kit/core": "^6.0.8",
+        "@dnd-kit/sortable": "^7.0.2",
+        "@dnd-kit/utilities": "^3.2.1",
+        "cors": "^2.8.5",
+        "date-fns": "^2.30.0",
+        "express": "^4.22.1",
+        "lucide-react": "^0.294.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.43",
+        "@types/react-dom": "^18.2.17",
+        "@vitejs/plugin-react": "^4.2.1",
+        "vite": "^5.0.8"
+    }
+}

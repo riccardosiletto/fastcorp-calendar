@@ -1,0 +1,50 @@
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-icon.small {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+}
+
+.project-icon.medium {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.project-icon.large {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+.project-icon.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-icon.circle {
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.project-icon.circle.small span {
+  font-size: 12px;
+}
+
+.project-icon.circle.medium span {
+  font-size: 18px;
+}
+
+.project-icon.circle.large span {
+  font-size: 24px;
+}
