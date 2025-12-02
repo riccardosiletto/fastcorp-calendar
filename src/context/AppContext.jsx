@@ -131,16 +131,43 @@ export const AppProvider = ({ children }) => {
 
         console.log('📊 Database status:', loadedProjects.length, 'projects,', loadedTasks.length, 'tasks')
 
-        // If no data, load initial projects
+        // If no data, try to load from default-data.json first, then fallback to initialProjects
         if (loadedTasks.length === 0) {
           console.log('📦 Loading initial data...')
           await db.clearAllData()
 
-          for (const project of initialProjects) {
-            const { tasks, ...projectWithoutTasks } = project
-            await db.saveProject(projectWithoutTasks)
-            for (const task of tasks) {
+          let dataToLoad = null
+          
+          // Try to fetch default-data.json (contains your saved data with calendar assignments)
+          try {
+            const response = await fetch('/default-data.json')
+            if (response.ok) {
+              const defaultData = await response.json()
+              if (defaultData.projects && defaultData.tasks && defaultData.tasks.length > 0) {
+                dataToLoad = defaultData
+                console.log('📁 Found default-data.json with', defaultData.tasks.length, 'tasks')
+              }
+            }
+          } catch (e) {
+            console.log('⚠️ No default-data.json found, using initial data')
+          }
+
+          if (dataToLoad) {
+            // Load from default-data.json
+            for (const project of dataToLoad.projects) {
+              await db.saveProject(project)
+            }
+            for (const task of dataToLoad.tasks) {
               await db.saveTask(task)
+            }
+          } else {
+            // Fallback to hardcoded initial projects
+            for (const project of initialProjects) {
+              const { tasks, ...projectWithoutTasks } = project
+              await db.saveProject(projectWithoutTasks)
+              for (const task of tasks) {
+                await db.saveTask(task)
+              }
             }
           }
 
