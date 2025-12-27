@@ -33,13 +33,13 @@
 .revenue-card {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 14px 24px;
+  gap: 6px;
+  padding: 18px 32px;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.2s;
-  min-width: 120px;
+  min-width: 150px;
 }
 
 .revenue-card:hover {
@@ -60,7 +60,7 @@
 }
 
 .revenue-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-tertiary);
   text-transform: uppercase;
@@ -68,7 +68,7 @@
 }
 
 .revenue-value {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
 }
