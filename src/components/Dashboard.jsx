@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { Plus, MoreHorizontal, Pencil, Copy, Sun, Moon, LayoutGrid, Columns, Settings, Trash2, Edit2, GripVertical, Info, ChevronDown, Check, Eye, Calendar, Hourglass, AlertTriangle, TrendingUp, DollarSign, Zap } from 'lucide-react'
+import { Plus, MoreHorizontal, Pencil, Copy, Sun, Moon, LayoutGrid, Columns, Settings, Trash2, Edit2, GripVertical, Info, ChevronDown, Check, Eye, Calendar, Hourglass, AlertTriangle } from 'lucide-react'
 import { DndContext, closestCenter, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core'
 import { SortableContext, arrayMove, useSortable, rectSortingStrategy, verticalListSortingStrategy } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
@@ -526,40 +526,25 @@ const Dashboard = () => {
     <div className="dashboard">
       <header className="dashboard-header">
         <div className="header-left">
-          <div className="search-bar">
-            <input type="text" placeholder="Search..." />
-          </div>
           <div className="revenue-cards">
             <div className="revenue-card arr">
-              <div className="revenue-icon">
-                <TrendingUp size={16} />
-              </div>
-              <div className="revenue-info">
-                <span className="revenue-label">ARR</span>
-                <span className="revenue-value">{formatCurrency(revenueStats.arr)}</span>
-              </div>
+              <span className="revenue-label">ARR</span>
+              <span className="revenue-value">{formatCurrency(revenueStats.arr)}</span>
             </div>
             <div className="revenue-card mrr">
-              <div className="revenue-icon">
-                <DollarSign size={16} />
-              </div>
-              <div className="revenue-info">
-                <span className="revenue-label">MRR</span>
-                <span className="revenue-value">{formatCurrency(revenueStats.mrr)}</span>
-              </div>
+              <span className="revenue-label">MRR</span>
+              <span className="revenue-value">{formatCurrency(revenueStats.mrr)}</span>
             </div>
             <div className="revenue-card performance">
-              <div className="revenue-icon">
-                <Zap size={16} />
-              </div>
-              <div className="revenue-info">
-                <span className="revenue-label">Performance</span>
-                <span className="revenue-value">{formatCurrency(revenueStats.performanceFee)}</span>
-              </div>
+              <span className="revenue-label">Performance</span>
+              <span className="revenue-value">{formatCurrency(revenueStats.performanceFee)}</span>
             </div>
           </div>
         </div>
         <div className="header-right">
+          <div className="search-bar">
+            <input type="text" placeholder="Search..." />
+          </div>
           <button className="theme-toggle-btn" onClick={toggleTheme} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
