@@ -36,10 +36,28 @@ const KanbanBoard = () => {
     )
   }, [projects])
 
+  // Derive effective label from task properties to sync calendar with Kanban
+  const getEffectiveLabel = (task) => {
+    // If task has explicit label of in-progress or high-priority, keep it
+    if (task.label === 'in-progress' || task.label === 'high-priority') {
+      return task.label
+    }
+    // If task has a date assigned, it's scheduled
+    if (task.date) {
+      return 'scheduled'
+    }
+    // If task has explicit label, use it
+    if (task.label) {
+      return task.label
+    }
+    // Default: to be scheduled
+    return 'to-schedule'
+  }
+
   const tasksByColumn = useMemo(() => {
     const grouped = {}
     columns.forEach(col => {
-      grouped[col.id] = allTasks.filter(task => task.label === col.id)
+      grouped[col.id] = allTasks.filter(task => getEffectiveLabel(task) === col.id)
     })
     return grouped
   }, [allTasks, columns])
@@ -63,7 +81,15 @@ const KanbanBoard = () => {
 
     // Check if dropping on a column
     if (columns.find(col => col.id === newStatus)) {
-      updateTask(taskId, { label: newStatus })
+      const task = allTasks.find(t => t.id === taskId)
+      const updates = { label: newStatus }
+      
+      // If moving to "to-schedule", clear the date
+      if (newStatus === 'to-schedule' && task?.date) {
+        updates.date = null
+      }
+      
+      updateTask(taskId, updates)
     }
 
     setActiveTask(null)

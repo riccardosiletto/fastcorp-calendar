@@ -391,12 +391,12 @@ export const AppProvider = ({ children }) => {
   }
 
   const moveTaskToDate = (taskId, date) => {
-    // When assigning a date, automatically set status to "scheduled"
     const task = projects.flatMap(p => p.tasks).find(t => t.id === taskId)
     const updates = { date }
 
-    // Only auto-set to "scheduled" if not already "in-progress" or "high-priority"
-    if (task && (!task.label || task.label === 'to-schedule')) {
+    // When assigning a date, automatically set label to "scheduled"
+    // Keep the label if it's already "in-progress" or "high-priority"
+    if (task && task.label !== 'in-progress' && task.label !== 'high-priority') {
       updates.label = 'scheduled'
     }
 

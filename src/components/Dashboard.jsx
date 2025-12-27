@@ -403,7 +403,15 @@ const Dashboard = () => {
   }
 
   const handleStatusChange = (taskId, newLabel) => {
-    updateTask(taskId, { label: newLabel })
+    const task = projects.flatMap(p => p.tasks).find(t => t.id === taskId)
+    const updates = { label: newLabel }
+
+    // If moving to "to-schedule", clear the date
+    if (newLabel === 'to-schedule' && task?.date) {
+      updates.date = null
+    }
+
+    updateTask(taskId, updates)
   }
 
   const handleDragStart = (event) => {

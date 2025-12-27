@@ -78,7 +78,7 @@ const AssignTaskModal = ({ date, onClose }) => {
                       />
                       <div className="task-selection-content">
                         <div className="task-selection-title">
-                          <span className={`task-title ${task.completed ? '' : ''}`}>
+                          <span className={`task-title ${task.completed ? 'completed' : ''}`}>
                             {task.title}
                           </span>
                           <span className={`task-label-badge label-${status}`}>
