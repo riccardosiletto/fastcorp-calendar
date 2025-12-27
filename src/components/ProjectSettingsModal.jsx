@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { X, Upload, Palette } from 'lucide-react'
+import { X, Upload, Palette, DollarSign } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 import './ProjectSettingsModal.css'
 
@@ -10,6 +10,8 @@ const ProjectSettingsModal = ({ project, onClose }) => {
     color: project.color,
     logo: project.logo,
     dueDate: project.dueDate || '',
+    monthlyFee: project.monthlyFee || '',
+    performanceFee: project.performanceFee || '',
   })
   const fileInputRef = useRef(null)
 
@@ -118,6 +120,36 @@ const ProjectSettingsModal = ({ project, onClose }) => {
               type="date"
               value={projectData.dueDate}
               onChange={(e) => setProjectData({ ...projectData, dueDate: e.target.value })}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>
+              <DollarSign size={16} />
+              <span>Monthly Fee (€)</span>
+            </label>
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              value={projectData.monthlyFee}
+              onChange={(e) => setProjectData({ ...projectData, monthlyFee: e.target.value })}
+              placeholder="0.00"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>
+              <DollarSign size={16} />
+              <span>Performance Fee (€)</span>
+            </label>
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              value={projectData.performanceFee}
+              onChange={(e) => setProjectData({ ...projectData, performanceFee: e.target.value })}
+              placeholder="0.00"
             />
           </div>
         </div>
