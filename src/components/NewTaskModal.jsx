@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
-import { X } from 'lucide-react'
+import { X, User } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 import ProjectIcon from './ProjectIcon'
 import './ProjectSettingsModal.css'
+
+const TEAM_MEMBERS = [
+  { value: '', label: 'Unassigned' },
+  { value: 'riccardo', label: 'Riccardo', color: '#3b82f6' },
+  { value: 'stefano', label: 'Stefano', color: '#10b981' },
+  { value: 'roy', label: 'Roy', color: '#f59e0b' },
+]
 
 const NewTaskModal = ({ onClose, preselectedProjectId = null }) => {
   const { projects, addTask } = useApp()
@@ -11,6 +18,7 @@ const NewTaskModal = ({ onClose, preselectedProjectId = null }) => {
     projectId: preselectedProjectId || (projects.length > 0 ? projects[0].id : ''),
     label: 'in-progress',
     date: '',
+    owner: '',
   })
 
   const labelOptions = [
@@ -25,6 +33,7 @@ const NewTaskModal = ({ onClose, preselectedProjectId = null }) => {
       addTask({
         ...taskData,
         date: taskData.date || null,
+        owner: taskData.owner || null,
       })
       onClose()
     }
@@ -82,6 +91,31 @@ const NewTaskModal = ({ onClose, preselectedProjectId = null }) => {
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className="form-group">
+            <label>Owner</label>
+            <div className="owner-select-wrapper">
+              <select
+                value={taskData.owner}
+                onChange={(e) => setTaskData({ ...taskData, owner: e.target.value })}
+                className="owner-select"
+              >
+                {TEAM_MEMBERS.map(member => (
+                  <option key={member.value} value={member.value}>
+                    {member.label}
+                  </option>
+                ))}
+              </select>
+              {taskData.owner && (
+                <div
+                  className="owner-avatar-preview"
+                  style={{ backgroundColor: TEAM_MEMBERS.find(m => m.value === taskData.owner)?.color }}
+                >
+                  {taskData.owner.charAt(0).toUpperCase()}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="form-group">

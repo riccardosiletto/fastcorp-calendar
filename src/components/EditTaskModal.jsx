@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { X, Trash2, Eye, Calendar, Hourglass, AlertTriangle } from 'lucide-react'
+import { X, Trash2, Eye, Calendar, Hourglass, AlertTriangle, User } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 import ProjectIcon from './ProjectIcon'
 import './ProjectSettingsModal.css'
@@ -11,6 +11,13 @@ const STATUS_OPTIONS = [
   { value: 'high-priority', label: 'High Priority', icon: AlertTriangle, color: '#ef4444' },
 ]
 
+const TEAM_MEMBERS = [
+  { value: '', label: 'Unassigned' },
+  { value: 'riccardo', label: 'Riccardo', color: '#3b82f6' },
+  { value: 'stefano', label: 'Stefano', color: '#10b981' },
+  { value: 'roy', label: 'Roy', color: '#f59e0b' },
+]
+
 const EditTaskModal = ({ task, onClose, onDelete }) => {
   const { projects, updateTask } = useApp()
   const [taskData, setTaskData] = useState({
@@ -19,6 +26,7 @@ const EditTaskModal = ({ task, onClose, onDelete }) => {
     label: task.label || 'to-schedule',
     date: task.date ? task.date.split('T')[0] : '',
     comments: task.comments || '',
+    owner: task.owner || '',
   })
 
   const handleSave = () => {
@@ -26,6 +34,7 @@ const EditTaskModal = ({ task, onClose, onDelete }) => {
       updateTask(task.id, {
         ...taskData,
         date: taskData.date || null,
+        owner: taskData.owner || null,
       })
       onClose()
     }
@@ -100,6 +109,31 @@ const EditTaskModal = ({ task, onClose, onDelete }) => {
                   return <StatusIcon size={18} />
                 })()}
               </div>
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label>Owner</label>
+            <div className="owner-select-wrapper">
+              <select
+                value={taskData.owner}
+                onChange={(e) => setTaskData({ ...taskData, owner: e.target.value })}
+                className="owner-select"
+              >
+                {TEAM_MEMBERS.map(member => (
+                  <option key={member.value} value={member.value}>
+                    {member.label}
+                  </option>
+                ))}
+              </select>
+              {taskData.owner && (
+                <div
+                  className="owner-avatar-preview"
+                  style={{ backgroundColor: TEAM_MEMBERS.find(m => m.value === taskData.owner)?.color }}
+                >
+                  {taskData.owner.charAt(0).toUpperCase()}
+                </div>
+              )}
             </div>
           </div>
 

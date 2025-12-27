@@ -329,6 +329,7 @@ export const AppProvider = ({ children }) => {
       priority: task.priority || statusInfo.priority || 'medium',
       description: task.description || '',
       assignedTo: task.assignedTo || '',
+      owner: task.owner || null,
     }
     delete newTask.label
 
